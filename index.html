@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🍃 Jungle</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <script src="cards.js"></script>
+  </head>
+
+  <body>
+    <div class="section1">
+      <h1>NATURE AS YOU'VE NEVER SEEN IT</h1>
+      <video src="./assets/waterfall.mp4" type="video/mp4" muted loop></video>
+    </div>
+
+    <div class="section2">
+      <div class="leftside">
+        <!-- <img src="./assets/leaf-rain.png" alt="Rain on Jungle Leaf" /> -->
+      </div>
+      <div class="rightside">
+        <div class="header">
+          <span id="grid-title" class="grid-title"
+            >THINK OUTSIDE <br />
+            THERE IS NO BOX</span
+          >
+        </div>
+        <p class="detail1">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore eaque nobis quisquam
+          consectetur <br />
+          laudantium!
+        </p>
+        <div class="separator"></div>
+        <p class="detail2">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore eaque nobis quisquam
+          consectetur <br />
+          laudantium!
+        </p>
+      </div>
+    </div>
+
+    <div class="section3">
+      <div class="card card-left" onclick="switchCards(this)">
+        <i class="fas fa-hiking fa-7x"></i>
+        <h2>Intense or Relaxing</h2>
+        <div class="separator2"></div>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis dignissimos neque
+          corrupti laboriosam aut et?
+        </p>
+      </div>
+      <div class="card card-middle" onclick="switchCards(this)">
+        <i class="fas fa-map fa-7x"></i>
+        <h2>Fully Planned For You</h2>
+        <div class="separator2"></div>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis dignissimos neque
+          corrupti laboriosam aut et?
+        </p>
+      </div>
+      <div class="card card-right" onclick="switchCards(this)">
+        <i class="fas fa-shoe-prints fa-7x"></i>
+        <h2>Off The Beaten Path</h2>
+        <div class="separator2"></div>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis dignissimos neque
+          corrupti laboriosam aut et?
+        </p>
+      </div>
+    </div>
+
+    <script src="animations.js"></script>
+  </body>
+</html>
