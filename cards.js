@@ -1,4 +1,11 @@
 function switchCards(target) {
+  // console.log(window.innerWidth)
+  // console.log(window.innerHeight)
+  if (window.innerWidth <= 800 && window.innerHeight <= 800) {
+    console.log('Mobile detected')
+    return
+  }
+
   // console.log(target)
   // console.log(event)
   const allCards = Array.from(document.getElementsByClassName('section3')[0].children)

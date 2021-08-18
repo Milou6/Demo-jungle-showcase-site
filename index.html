@@ -15,13 +15,21 @@
     />
 
     <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="stylesheet" href="mobile.css" type="text/css" />
     <script src="cards.js"></script>
   </head>
 
   <body>
     <div class="section section1">
       <h1>NATURE AS YOU'VE NEVER SEEN IT</h1>
-      <video src="./assets/waterfall_comp.m4v" type="video/mp4" autoplay muted loop></video>
+      <video
+        src="./assets/waterfall_comp.m4v"
+        poster="./assets/hero-poster.jpg"
+        type="video/mp4"
+        autoplay
+        muted
+        loop
+      ></video>
     </div>
 
     <div class="section section2">
@@ -84,31 +92,37 @@
           <div
             class="grid-item"
             onmouseenter="setFocusImage(this)"
+            onclick="setFocusImage(this)"
             adventureTitle="Manaus, Amazon Rainforest"
           ></div>
           <div
             class="grid-item"
             onmouseenter="setFocusImage(this)"
+            onclick="setFocusImage(this)"
             adventureTitle="Grand Canyon, USA"
           ></div>
           <div
             class="grid-item"
             onmouseenter="setFocusImage(this)"
+            onclick="setFocusImage(this)"
             adventureTitle="Norwegian Fjords"
           ></div>
           <div
             class="grid-item"
             onmouseenter="setFocusImage(this)"
+            onclick="setFocusImage(this)"
             adventureTitle="Napa Valley, USA"
           ></div>
           <div
             class="grid-item"
             onmouseenter="setFocusImage(this)"
+            onclick="setFocusImage(this)"
             adventureTitle="Snowy Mountains, Australia"
           ></div>
           <div
             class="grid-item"
             onmouseenter="setFocusImage(this)"
+            onclick="setFocusImage(this)"
             adventureTitle="Valais Mountains, Switzerland"
           ></div>
         </div>
@@ -116,6 +130,7 @@
 
       <div class="s4-rightside">
         <img id="focusDisplay" src="./assets/exp1.jpg" alt="" />
+        <!-- <div id="focusDetails"> -->
         <h2 id="focusTitle">Manaus, Amazon Rainforest</h2>
         <p>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure, accusantium, earum ut amet
@@ -123,6 +138,7 @@
           Quas possimus deserunt tempore! A libero perspiciatis officiis?
         </p>
         <a href="#!">Learn More</a>
+        <!-- </div> -->
       </div>
     </div>
   </body>
@@ -130,4 +146,5 @@
   <!-- JS calls here -->
   <script src="grid.js"></script>
   <script src="animations.js"></script>
+  <script src="card-swipe.js"></script>
 </html>
