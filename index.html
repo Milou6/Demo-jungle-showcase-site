@@ -19,29 +19,27 @@
   </head>
 
   <body>
-    <div class="section1">
+    <div class="section section1">
       <h1>NATURE AS YOU'VE NEVER SEEN IT</h1>
       <video src="./assets/waterfall.mp4" type="video/mp4" muted loop></video>
     </div>
 
-    <div class="section2">
-      <div class="leftside">
-        <!-- <img src="./assets/leaf-rain.png" alt="Rain on Jungle Leaf" /> -->
-      </div>
-      <div class="rightside">
+    <div class="section section2">
+      <div class="s2-leftside"></div>
+      <div class="s2-rightside">
         <div class="header">
-          <span id="grid-title" class="grid-title"
-            >THINK OUTSIDE <br />
+          <span id="grid-title">
+            THINK OUTSIDE <br />
             THERE IS NO BOX</span
           >
         </div>
-        <p class="detail1">
+        <p class="detail detail1">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore eaque nobis quisquam
           consectetur <br />
           laudantium!
         </p>
         <div class="separator"></div>
-        <p class="detail2">
+        <p class="detail detail2">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore eaque nobis quisquam
           consectetur <br />
           laudantium!
@@ -49,7 +47,7 @@
       </div>
     </div>
 
-    <div class="section3">
+    <div class="section section3">
       <div class="card card-left" onclick="switchCards(this)">
         <i class="fas fa-hiking fa-7x"></i>
         <h2>Intense or Relaxing</h2>
@@ -79,6 +77,57 @@
       </div>
     </div>
 
-    <script src="animations.js"></script>
+    <div class="section section4">
+      <div class="s4-leftside">
+        <h2>UPCOMING ADVENTURES</h2>
+        <div class="grid-adventures">
+          <div
+            class="grid-item"
+            onmouseenter="setFocusImage(this)"
+            adventureTitle="Manaus, Amazon Rainforest"
+          ></div>
+          <div
+            class="grid-item"
+            onmouseenter="setFocusImage(this)"
+            adventureTitle="Grand Canyon, USA"
+          ></div>
+          <div
+            class="grid-item"
+            onmouseenter="setFocusImage(this)"
+            adventureTitle="Norwegian Fjords"
+          ></div>
+          <div
+            class="grid-item"
+            onmouseenter="setFocusImage(this)"
+            adventureTitle="Napa Valley, USA"
+          ></div>
+          <div
+            class="grid-item"
+            onmouseenter="setFocusImage(this)"
+            adventureTitle="Snowy Mountains, Australia"
+          ></div>
+          <div
+            class="grid-item"
+            onmouseenter="setFocusImage(this)"
+            adventureTitle="Valais Mountains, Switzerland"
+          ></div>
+        </div>
+      </div>
+
+      <div class="s4-rightside">
+        <img id="focusDisplay" src="./assets/exp1.jpg" alt="" />
+        <h2 id="focusTitle">Manaus, Amazon Rainforest</h2>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure, accusantium, earum ut amet
+          distinctio sequi adipisci neque omnis numquam molestias sapiente quod. <br /><br />
+          Quas possimus deserunt tempore! A libero perspiciatis officiis?
+        </p>
+        <a href="#!">Learn More</a>
+      </div>
+    </div>
   </body>
+
+  <!-- JS calls here -->
+  <script src="grid.js"></script>
+  <script src="animations.js"></script>
 </html>
