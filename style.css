@@ -13,8 +13,9 @@
 html {
   background-color: var(--light-gray);
   font-family: 'Roboto', sans-serif;
-  scroll-snap-type: y proximity;
 
+  scroll-snap-type: y proximity;
+  scroll-behavior: smooth;
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
@@ -26,9 +27,12 @@ html::-webkit-scrollbar {
 .section {
   width: 100vw;
   height: 100vh;
+
   overflow-x: hidden;
-  /* scroll-snap-type: y mandatory; */
   scroll-snap-align: start;
+}
+footer {
+  scroll-snap-align: end;
 }
 
 /* ========================================================================== */
@@ -100,11 +104,6 @@ html::-webkit-scrollbar {
   grid-area: header;
   margin-top: 4rem;
 }
-.is-inViewport {
-  /* opacity: 1 !important; */
-  transform: translateX(100px);
-  visibility: visible !important;
-}
 .header span {
   position: relative;
 
@@ -112,18 +111,11 @@ html::-webkit-scrollbar {
   font-weight: bold;
   font-size: 2rem;
 }
-#grid-title {
-  /* opacity: 0; */
-  /* transform: translateX(100px); */
-  visibility: hidden;
-  transition: all 1s ease-in-out;
-}
-/* Highlight effect under the Section2 Grid Title */
-#grid-title::before {
+.grid-title::before {
   content: '';
   position: absolute;
   top: 0;
-  left: -5%;
+  left: -60%;
   z-index: -1;
 
   background-color: var(--light-green);
@@ -131,8 +123,20 @@ html::-webkit-scrollbar {
   height: 2.5rem;
   padding: 0 1rem;
 
-  transform: skewX(-15deg);
+  transition-property: opacity, left, transform;
+  transition-duration: 0.1s, 1s, 1s;
+  transition-timing-function: cubic-bezier(1, 0, 0, 1);
+
+  opacity: 0;
+  transform: skewX(-15deg) scaleX(0.1);
 }
+/* Highlight effect under the Section2 Grid Title */
+.is-inViewport::before {
+  opacity: 1;
+  left: -5%;
+  transform: skewX(-15deg) scaleX(1);
+}
+
 .detail {
   align-self: flex-start;
   padding: 0 5rem;
@@ -140,7 +144,17 @@ html::-webkit-scrollbar {
 
   font-size: 1.2rem;
   font-weight: 300;
+
+  /* anim stuff */
+  transition: all 1s linear;
+  opacity: 0;
+  margin-top: 2rem;
 }
+.detail-showing {
+  opacity: 1;
+  margin-top: 0;
+}
+
 .detail1 {
   grid-area: detail1;
 }
@@ -191,14 +205,8 @@ i.fas {
   box-shadow: 0px 15px 20px 2px hsla(0, 0%, 0%, 0.25);
   border-radius: 20px;
 
-  transform: translate(-50%, -50%);
-
   transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-
-  /* transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55); */
-  /* animation: undefined-easeOutElastic; */
-  /* animation-duration: 3s;
-  animation-name: undefined-easeOutElastic; */
+  transform: translate(-50%, -50%);
 }
 .separator2 {
   height: 1px;
@@ -331,4 +339,35 @@ i.fas {
 .s4-rightside a:hover {
   transform: scale(105%);
   background-color: var(--light-green);
+}
+
+/* ========================================================================== */
+/* Footer */
+/* ========================================================================== */
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  height: 30vh;
+
+  background-color: hsl(153, 77%, 17%);
+  color: var(--light-gray);
+}
+
+i.fab {
+  margin-left: 2rem;
+}
+i.fab:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+footer a {
+  text-decoration: underline;
+  color: var(--light-gray);
+}
+footer a:hover {
+  text-decoration: underline;
+  color: var(--light-green);
 }

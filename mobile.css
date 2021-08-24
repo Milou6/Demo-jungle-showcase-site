@@ -72,6 +72,13 @@
     padding: 0.5rem 1rem;
     margin: 0.5rem 0;
   }
+
+  /* ======================================================================== */
+  /* Footer */
+  /* ======================================================================== */
+  footer {
+    flex-direction: column;
+  }
 }
 
 @media screen and (min-width: 620px) and (max-width: 800px) {
@@ -82,13 +89,4 @@
     padding: 0.5rem 1rem;
     margin: 0.5rem 0;
   }
-  /* .card-left {
-    transform: translate(-130%, -50%) scale(0.7);
-  }
-  .card-middle {
-    transform: translate(-50%, -60%) scale(0.7);
-  }
-  .card-right {
-    transform: translate(30%, -50%) scale(0.7);
-  } */
 }
