@@ -9,5 +9,5 @@ A simple and elegant showcase website, built with barebones HTML, CSS & JS.
 
 ✔ Fully mobile-responsive📲
 
-[Link right here](https://inspiring-carson-de8359.netlify.app/)
+[Link right here](https://jungle-showcase.netlify.app/)
 <img src="./assets/animation.gif" alt="website gif" width="900"/>
